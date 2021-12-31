@@ -12,18 +12,16 @@ namespace TestSetup
         public IMapper Mapper { get; set; }
         public CommonTestFixture()
         {
-            var options = new DbContextOptionsBuilder<BookStoreDbContext>().UseInMemoryDatabase(databaseName: "BookStoreTestDB").EnableSensitiveDataLogging().Options;
-
+            var options = new DbContextOptionsBuilder<BookStoreDbContext>().UseInMemoryDatabase(databaseName: "BookStoreTestDB").Options;
             Context = new BookStoreDbContext(options);
+
             Context.Database.EnsureCreated();
             Context.AddBooks();
             Context.AddGenres();
             Context.SaveChanges();
 
-            Mapper = new MapperConfiguration(cfg =>
-            {
-                cfg.AddProfile<MappingProfile>();
-            }).CreateMapper();
+            Mapper = new MapperConfiguration(cfg => { cfg.AddProfile<MappingProfile>(); }).CreateMapper();
+
         }
     }
 }

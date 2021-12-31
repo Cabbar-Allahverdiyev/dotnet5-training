@@ -21,41 +21,49 @@ namespace Application.BookOperations.Commands.CreateBook
         }
 
         [Fact]
-        public void WhenAlreadyExistBookTitleIsGiven_InvalidOperationException_ShouldBeReturn()
+        public void WhenAlreadyExistBookTitleGiven_InvalidOperationException_ShouldBeReturn()
         {
-            //arrange
-            var book = new Book() { Title = "Test Verisi", PageCount = 1000, PublishDate = new DateTime(1990, 01, 20), GenreId = 1 };
+            //arrange(Hazirliq)
+            Book book = new Book() { Title = "WhenAlreadyExistBookTitleGiven_InvalidOperationException_ShouldBeReturn", PageCount = 100, PublishDate = new DateTime(1990, 1, 22), GenreId = 1 };
             _context.Books.Add(book);
             _context.SaveChanges();
 
             CreateBookCommand command = new CreateBookCommand(_context, _mapper);
             command.Model = new CreateBookModel() { Title = book.Title };
 
-            //act & assert
+            //act(Ise Salma) & assert(Dogrulama)
             FluentActions
                 .Invoking(() => command.Handle())
-                .Should().Throw<InvalidOperationException>().And.Message.Should().Be("Kitap zaten mevcut.");
+                .Should().Throw<InvalidOperationException>().And.Message.Should().Be("Kitab movcuddur");
+
+
         }
 
         [Fact]
-        public void WhenValidInputsAreGiven_Book_ShouldBeCreated()
+        public void WhenValidInputsAreGiven_Book_shouldBeCreated()
         {
             //arrenge
             CreateBookCommand command = new CreateBookCommand(_context, _mapper);
-            CreateBookModel model = new CreateBookModel() { Title = "Lord Of The Rings", PageCount = 1000, PublishDate = new DateTime(1990, 01, 20), GenreId = 1 };
+            CreateBookModel model = new CreateBookModel()
+            {
+                Title = "Lord Of The Rings",
+                PageCount = 1000,
+                PublishDate = new DateTime(1990, 01, 20),
+                GenreId = 1
+            };
             command.Model = model;
 
             //act
-            FluentActions
-                .Invoking(() => command.Handle()).Invoke();
-
-            var book = _context.Books.SingleOrDefault(book => book.Title == "Lord Of The Rings");
+            FluentActions.Invoking(() => command.Handle()).Invoke();
 
             //assert
+            var book = _context.Books.SingleOrDefault(b => b.Title == model.Title);
             book.Should().NotBeNull();
             book.PageCount.Should().Be(model.PageCount);
             book.PublishDate.Should().Be(model.PublishDate);
             book.GenreId.Should().Be(model.GenreId);
+
+
         }
     }
 }

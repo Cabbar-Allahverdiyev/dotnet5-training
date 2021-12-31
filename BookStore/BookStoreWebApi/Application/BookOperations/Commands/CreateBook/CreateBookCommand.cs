@@ -22,7 +22,7 @@ namespace BookStoreWebApi.Application.BookOperations.CreateBook
             var book = _context.Books.SingleOrDefault(x => x.Title == Model.Title);
 
             if (book is not null)
-                throw new InvalidOperationException("Kitap zaten mevcut.");
+                throw new InvalidOperationException("Kitab movcuddur");
 
             book = _mapper.Map<Book>(Model);
             _context.Books.Add(book);

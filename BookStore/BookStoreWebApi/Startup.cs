@@ -27,6 +27,7 @@ namespace BookStoreWebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(option =>
             {
                 option.TokenValidationParameters = new TokenValidationParameters
@@ -38,7 +39,7 @@ namespace BookStoreWebApi
                     ValidIssuer = Configuration["Token:Issuer"],
                     ValidAudience = Configuration["Token:Audience"],
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Token:SecurityKey"])),
-                    ClockSkew = TimeSpan.Zero
+                    ClockSkew = TimeSpan.Zero //ferqli olkelerdeki saatlar zero-nun yerine yazilir
                 };
             });
 
