@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Cy2NNrPCmx+HSlCQTXAhNVMLCDAUjpDj/FD0KKF6i7Pa8/2cM2EPBZrWkqgvWXSySu6CjrbOOTZuzJ9o3pXJvw==",
+  "dgSpecHash": "DxNXMBA30RD0pnrUlmYfJK4qKuvg/D8NglC4zMa9Q1TmOuLOlcJ6HL2Qpd0sgbxAwu+LZtBqiVxJZVcoxCnc/A==",
   "success": true,
-  "projectFilePath": "c:\\Practices\\net5-training\\BookStore\\Tests\\WebApi.UnitTests\\Webapi.UnitTests.csproj",
+  "projectFilePath": "C:\\Practices\\net5-training\\BookStore\\Tests\\Webapi.UnitTests\\Webapi.UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cabbar\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\cabbar\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

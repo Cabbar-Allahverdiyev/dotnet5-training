@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Practices\\net5-training\\BookStore\\BookStoreWebApi\\BookStoreWebApi.csproj": {}
+    "C:\\Practices\\net5-training\\BookStore\\BookStoreWebApi\\BookStoreWebApi.csproj": {}
   },
   "projects": {
-    "c:\\Practices\\net5-training\\BookStore\\BookStoreWebApi\\BookStoreWebApi.csproj": {
+    "C:\\Practices\\net5-training\\BookStore\\BookStoreWebApi\\BookStoreWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Practices\\net5-training\\BookStore\\BookStoreWebApi\\BookStoreWebApi.csproj",
+        "projectUniqueName": "C:\\Practices\\net5-training\\BookStore\\BookStoreWebApi\\BookStoreWebApi.csproj",
         "projectName": "BookStoreWebApi",
-        "projectPath": "c:\\Practices\\net5-training\\BookStore\\BookStoreWebApi\\BookStoreWebApi.csproj",
+        "projectPath": "C:\\Practices\\net5-training\\BookStore\\BookStoreWebApi\\BookStoreWebApi.csproj",
         "packagesPath": "C:\\Users\\cabbar\\.nuget\\packages\\",
-        "outputPath": "c:\\Practices\\net5-training\\BookStore\\BookStoreWebApi\\obj\\",
+        "outputPath": "C:\\Practices\\net5-training\\BookStore\\BookStoreWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

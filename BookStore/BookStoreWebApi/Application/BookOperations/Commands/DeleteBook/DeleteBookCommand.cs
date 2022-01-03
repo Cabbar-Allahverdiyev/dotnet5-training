@@ -20,7 +20,7 @@ namespace BookStoreWebApi.Application.BookOperations.DeleteBook
             var book = _context.Books.SingleOrDefault(x => x.Id == BookId);
 
             if (book is null)
-                throw new InvalidOperationException("Kitap Bulunamadı");
+                throw new InvalidOperationException("Kitab tapılmadı");
 
             _context.Books.Remove(book);
             _context.SaveChanges();

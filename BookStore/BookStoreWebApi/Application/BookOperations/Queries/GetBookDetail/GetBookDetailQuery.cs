@@ -24,7 +24,7 @@ namespace BookStoreWebApi.Application.BookOperations.GetBookDetail
             var book = _context.Books.Include(x => x.Genre).SingleOrDefault(x => x.Id == BookId);
 
             if (book is null)
-                throw new InvalidOperationException("Kitap bulunamadı.");
+                throw new InvalidOperationException("Kitab tapılmadı");
 
             BookDetailViewModel vm = _mapper.Map<BookDetailViewModel>(book);
             return vm;

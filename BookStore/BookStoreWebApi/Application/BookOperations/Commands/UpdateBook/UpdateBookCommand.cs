@@ -17,10 +17,10 @@ namespace BookStoreWebApi.Application.BookOperations.UpdateBook
 
         public void Handle()
         {
-            var book = _context.Books.SingleOrDefault(x => x.Id == BookId);
+            Book book = _context.Books.SingleOrDefault(x => x.Id == BookId);
 
             if (book is null)
-                throw new InvalidOperationException("Kitap Bulunamadı");
+                throw new InvalidOperationException("Kitab tapılmadı");
 
 
             book.GenreId = Model.GenreId != default ? Model.GenreId : book.GenreId;

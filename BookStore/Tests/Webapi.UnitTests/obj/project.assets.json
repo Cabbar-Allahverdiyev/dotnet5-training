@@ -7219,11 +7219,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Practices\\net5-training\\BookStore\\Tests\\WebApi.UnitTests\\Webapi.UnitTests.csproj",
+      "projectUniqueName": "C:\\Practices\\net5-training\\BookStore\\Tests\\Webapi.UnitTests\\Webapi.UnitTests.csproj",
       "projectName": "Webapi.UnitTests",
-      "projectPath": "c:\\Practices\\net5-training\\BookStore\\Tests\\WebApi.UnitTests\\Webapi.UnitTests.csproj",
+      "projectPath": "C:\\Practices\\net5-training\\BookStore\\Tests\\Webapi.UnitTests\\Webapi.UnitTests.csproj",
       "packagesPath": "C:\\Users\\cabbar\\.nuget\\packages\\",
-      "outputPath": "c:\\Practices\\net5-training\\BookStore\\Tests\\WebApi.UnitTests\\obj\\",
+      "outputPath": "C:\\Practices\\net5-training\\BookStore\\Tests\\Webapi.UnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -7244,8 +7244,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "c:\\Practices\\net5-training\\BookStore\\BookStoreWebApi\\BookStoreWebApi.csproj": {
-              "projectPath": "c:\\Practices\\net5-training\\BookStore\\BookStoreWebApi\\BookStoreWebApi.csproj"
+            "C:\\Practices\\net5-training\\BookStore\\BookStoreWEbapi\\BookStoreWebApi.csproj": {
+              "projectPath": "C:\\Practices\\net5-training\\BookStore\\BookStoreWEbapi\\BookStoreWebApi.csproj"
             }
           }
         }

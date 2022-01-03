@@ -22,8 +22,14 @@ namespace Application.BookOperations.Commands.CreateBook
             //arrange
             CreateBookCommand command = new CreateBookCommand(null, null);
 
-            command.Model = new CreateBookModel() { Title = title, PageCount = pageCount, PublishDate = DateTime.Now.AddDays(-10), 
-                                                    GenreId = genreId };
+            command.Model = new CreateBookModel()
+            {
+                Title = title,
+                PageCount = pageCount,
+                PublishDate = DateTime.Now.AddDays(-10),
+                GenreId = genreId
+            };
+
             CreateBookCommandValidator validator = new CreateBookCommandValidator();
             var errors = validator.Validate(command);
 
@@ -31,14 +37,19 @@ namespace Application.BookOperations.Commands.CreateBook
             errors.Errors.Count.Should().BeGreaterThan(0);
         }
 
-         [Fact] 
+        [Fact]
         public void WhenDateTimeEqualNowIsGiven_Validator_ShouldBeReturnError()
         {
             //arrange
             CreateBookCommand command = new CreateBookCommand(null, null);
 
-            command.Model = new CreateBookModel() { Title = "Lord Of The Rings", PageCount = 100, PublishDate = DateTime.Now, 
-                                                    GenreId = 1 };
+            command.Model = new CreateBookModel()
+            {
+                Title = "Lord Of The Rings",
+                PageCount = 100,
+                PublishDate = DateTime.Now,
+                GenreId = 1
+            };
             CreateBookCommandValidator validator = new CreateBookCommandValidator();
             var errors = validator.Validate(command);
 
