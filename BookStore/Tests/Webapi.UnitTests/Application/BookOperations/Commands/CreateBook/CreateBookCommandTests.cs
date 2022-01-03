@@ -12,7 +12,7 @@ namespace Application.BookOperations.Commands.CreateBook
 {
     public class CreateBookCommandTests : IClassFixture<CommonTestFixture>
     {
-        private readonly BookStoreDbContext _context;
+        private readonly IBookStoreDbContext _context;
         private readonly IMapper _mapper;
         public CreateBookCommandTests(CommonTestFixture testFixture)
         {
@@ -24,7 +24,7 @@ namespace Application.BookOperations.Commands.CreateBook
         public void WhenAlreadyExistBookTitleGiven_InvalidOperationException_ShouldBeReturn()
         {
             //arrange(Hazirliq)
-            Book book = new Book() { Title = "WhenAlreadyExistBookTitleGiven_InvalidOperationException_ShouldBeReturn", PageCount = 100, PublishDate = new DateTime(1990, 1, 22), GenreId = 1 };
+            Book book = new Book() { Id = 1, Title = "wWhenAlreadyExistBookTitleGiven_InvalidOperationException_ShouldBeReturn", PageCount = 100, PublishDate = new DateTime(1990, 1, 22), GenreId = 1 };
             _context.Books.Add(book);
             _context.SaveChanges();
 
@@ -46,7 +46,7 @@ namespace Application.BookOperations.Commands.CreateBook
             CreateBookCommand command = new CreateBookCommand(_context, _mapper);
             CreateBookModel model = new CreateBookModel()
             {
-                Title = "Lord Of The Rings",
+                Title = "lLord Of The Rings",
                 PageCount = 1000,
                 PublishDate = new DateTime(1990, 01, 20),
                 GenreId = 1
