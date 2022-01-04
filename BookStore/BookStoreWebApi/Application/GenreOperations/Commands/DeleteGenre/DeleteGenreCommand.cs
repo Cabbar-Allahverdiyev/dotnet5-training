@@ -19,7 +19,7 @@ namespace BookStoreWebApi.Application.GenreOperations.DeleteGenre
             var genre = _context.Genres.SingleOrDefault(x => x.Id == GenreId);
 
             if (genre is null)
-                throw new InvalidOperationException("Kitap Türü Bulunamadı");
+                throw new InvalidOperationException("Kitab növü tapılmadı");
 
             _context.Genres.Remove(genre);
             _context.SaveChanges();

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using TestSetup;
 using Xunit;
 
-namespace Webapi.UnitTests.Application.BookOperations.Queries.GetBookDetail
+namespace Webapi.UnitTests.Application.BookOperations.Queries.BookQueries.GetBookDetail
 {
     public class GetBookDetailQueryTest : IClassFixture<CommonTestFixture>
     {

@@ -4,7 +4,7 @@ using FluentAssertions;
 using TestSetup;
 using Xunit;
 
-namespace Application.BookOperations.Commands.CreateBook
+namespace Webapi.UnitTests.Application.BookOperations.Commands.BookCommands.CreateBook
 {
     public class CreateBookCommandValidatorTests : IClassFixture<CommonTestFixture>
     {

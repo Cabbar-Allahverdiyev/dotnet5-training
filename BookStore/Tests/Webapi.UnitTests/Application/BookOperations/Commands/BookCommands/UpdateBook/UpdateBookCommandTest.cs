@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using TestSetup;
 using Xunit;
 
-namespace Webapi.UnitTests.Application.BookOperations.Commands.UpdateBook
+namespace Webapi.UnitTests.Application.BookOperations.Commands.BookCommands.UpdateBook
 {
     public class UpdateBookCommandTest : IClassFixture<CommonTestFixture>
     {
@@ -43,7 +43,7 @@ namespace Webapi.UnitTests.Application.BookOperations.Commands.UpdateBook
         public void WhenValidInputsAreGiven_Book_shouldBeUpdate()
         {
             //arrange
-            Book testBook = new Book() { Id = 1007, Title = "WhenValidInputsAreGiven_Book_shouldBeUpdate", PageCount = 100, PublishDate = new DateTime(1990, 1, 22), GenreId = 1 };
+            Book testBook = new Book() { Id = 900, Title = "WhenValidInputsAreGiven_Book_shouldBeUpdate", PageCount = 100, PublishDate = new DateTime(1990, 1, 22), GenreId = 1 };
             _context.Books.Add(testBook);
             _context.SaveChanges();
 

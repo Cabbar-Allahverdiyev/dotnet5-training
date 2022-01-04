@@ -20,7 +20,7 @@ namespace BookStoreWebApi.Application.GenreOperations.CreateGenre
             var genre = _context.Genres.SingleOrDefault(x => x.Name == Model.Name);
 
             if (genre is not null)
-                throw new InvalidOperationException("Kitap türü zaten mevcut.");
+                throw new InvalidOperationException("Bu kitab növü artıq mövcuddur");
 
             genre = new Genre();
             genre.Name = Model.Name;

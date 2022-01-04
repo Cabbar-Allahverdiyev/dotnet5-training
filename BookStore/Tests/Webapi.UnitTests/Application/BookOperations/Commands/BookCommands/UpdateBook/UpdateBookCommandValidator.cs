@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using TestSetup;
 using Xunit;
 
-namespace Webapi.UnitTests.Application.BookOperations.Commands.UpdateBook
+namespace Webapi.UnitTests.Application.BookOperations.Commands.BookCommands.UpdateBook
 {
     public class UpdateBookCommandValidator:IClassFixture<CommonTestFixture>
     {
