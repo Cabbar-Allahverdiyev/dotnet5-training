@@ -27,12 +27,12 @@ namespace Webapi.UnitTests.Application.BookOperations.Commands.UpdateBook
         public void WhenAlreadyNotExistBookTitleGiven_InvalidOperationException_ShlouldBeReturn()
         {
             //arrange 
-            Book book = new Book() { Id = 11, Title = "WhenAlreadyNotExistBookTitleGiven_InvalidOperationException_ShlouldBeReturn", PageCount = 100, PublishDate = new DateTime(1990, 1, 22), GenreId = 1 };
+            Book book = new Book() {  Title = "WwhenAlreadyNotExistBookTitleGiven_InvalidOperationException_ShlouldBeReturn", PageCount = 100, PublishDate = new DateTime(1990, 1, 22), GenreId = 1 };
             _context.Books.Add(book);
             _context.SaveChanges();
 
             UpdateBookCommand command = new(_context);
-            command.BookId =14 ;
+            command.BookId =150 ;
             //act & assert 
             FluentActions
                 .Invoking(() => command.Handle())
@@ -43,7 +43,7 @@ namespace Webapi.UnitTests.Application.BookOperations.Commands.UpdateBook
         public void WhenValidInputsAreGiven_Book_shouldBeUpdate()
         {
             //arrange
-            Book testBook = new Book() { Id = 12, Title = "WhenValidInputsAreGiven_Book_shouldBeUpdate", PageCount = 100, PublishDate = new DateTime(1990, 1, 22), GenreId = 1 };
+            Book testBook = new Book() { Id = 1007, Title = "WhenValidInputsAreGiven_Book_shouldBeUpdate", PageCount = 100, PublishDate = new DateTime(1990, 1, 22), GenreId = 1 };
             _context.Books.Add(testBook);
             _context.SaveChanges();
 
@@ -52,12 +52,12 @@ namespace Webapi.UnitTests.Application.BookOperations.Commands.UpdateBook
             UpdateBookModel model = new()
             {
                 
-                Title = "Lord Of The Rings",
+                Title = "Llord Of The Rings",
                 PageCount = 1000,
                 PublishDate = new DateTime(1990, 01, 20),
                 GenreId = 1
             };
-            command.BookId = 12;
+            command.BookId = testBook.Id;
             command.Model = model;
 
             //act

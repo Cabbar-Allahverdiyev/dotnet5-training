@@ -24,7 +24,7 @@ namespace Application.BookOperations.Commands.CreateBook
         public void WhenAlreadyExistBookTitleGiven_InvalidOperationException_ShouldBeReturn()
         {
             //arrange(Hazirliq)
-            Book book = new Book() { Id = 1, Title = "wWhenAlreadyExistBookTitleGiven_InvalidOperationException_ShouldBeReturn", PageCount = 100, PublishDate = new DateTime(1990, 1, 22), GenreId = 1 };
+            Book book = new Book() {  Title = "wWhenAlreadyExistBookTitleGiven_InvalidOperationException_ShouldBeReturn", PageCount = 100, PublishDate = new DateTime(1990, 1, 22), GenreId = 1 };
             _context.Books.Add(book);
             _context.SaveChanges();
 
