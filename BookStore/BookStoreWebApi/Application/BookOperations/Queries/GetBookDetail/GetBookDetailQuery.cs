@@ -4,6 +4,7 @@ using System.Linq;
 using AutoMapper;
 using BookStoreWebApi.Common;
 using BookStoreWebApi.DBOperations;
+using BookStoreWebApi.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookStoreWebApi.Application.BookOperations.GetBookDetail
@@ -21,12 +22,12 @@ namespace BookStoreWebApi.Application.BookOperations.GetBookDetail
 
         public BookDetailViewModel Handle()
         {
-            var book = _context.Books.Include(x => x.Genre).SingleOrDefault(x => x.Id == BookId);
-
+            Book book = _context.Books.Include(x => x.Genre).SingleOrDefault(x => x.Id == BookId);
             if (book is null)
                 throw new InvalidOperationException("Kitab tapılmadı");
-
-            BookDetailViewModel vm = _mapper.Map<BookDetailViewModel>(book);
+            Genre genre = _context.Genres.SingleOrDefault(g => g.Id == book.GenreId);
+            //BookDetailViewModel vm = _mapper.Map<BookDetailViewModel>(book); 
+            BookDetailViewModel vm = new() { Genre = genre.Name, PageCount = book.PageCount, PublishDate = book.PublishDate, Title = book.Title };
             return vm;
         }
     }
@@ -36,6 +37,6 @@ namespace BookStoreWebApi.Application.BookOperations.GetBookDetail
         public string Title { get; set; }
         public string Genre { get; set; }
         public int PageCount { get; set; }
-        public string PublishDate { get; set; }
+        public DateTime PublishDate { get; set; }
     }
 }

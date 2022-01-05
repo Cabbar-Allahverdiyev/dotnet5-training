@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BookStoreWebApi.Application.BookOperations.GetBookDetail;
+using BookStoreWebApi.Application.BookOperations.GetBooks;
 using BookStoreWebApi.DBOperations;
 using BookStoreWebApi.Entities;
 using FluentAssertions;
@@ -47,14 +48,19 @@ namespace Webapi.UnitTests.Application.BookOperations.Queries.BookQueries.GetBoo
         [InlineData(2)]
         [InlineData(3)]
         public void WhenAlreadyExistBookIdGiven_Book_ShouldBeFind(int bookId)
-        {  
+        {
             //arrange
+
+            Book book=_context.Books.SingleOrDefault(b => b.Id ==bookId);
+            Genre genre=_context.Genres.SingleOrDefault(g => g.Id == book.GenreId);
+
             GetBookDetailQuery query = new GetBookDetailQuery(_context, _mapper);
             query.BookId = bookId;
+            BookDetailViewModel bookDetail = query.Handle();
             //act
-            Book book = _context.Books.SingleOrDefault(b => b.Id == bookId);
+            // Book book = _context.Books.SingleOrDefault(b => b.Id == bookId);
             //assert
-            book.Should().NotBeNull();
+            bookDetail.Should().NotBeNull();
 
         }
     }
