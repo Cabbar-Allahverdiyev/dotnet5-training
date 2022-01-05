@@ -24,7 +24,7 @@ namespace Webapi.UnitTests.Application.BookOperations.Commands.GenreCommands.Del
         [Fact]
         public void WhenAlreadyNoExistsGenreTitleGiven_InvalidOperationException_ShouldBeReturn()
         {
-            Genre genre = new() {Id=2000, Name= "WhenAlreadyNoExistsGenreTitleGiven_InvalidOperationException_ShouldBeReturn" };
+            Genre genre = new() {Id=300, Name= "WhenAlreadyNoExistsGenreTitleGiven_InvalidOperationException_ShouldBeReturn" };
             _context.Genres.Add(genre);
             _context.SaveChanges();
 
@@ -40,7 +40,7 @@ namespace Webapi.UnitTests.Application.BookOperations.Commands.GenreCommands.Del
         public void WhenValidInputsAreGiven_Genre_ShouldBeDeleted()
         {
             //arrange
-            Genre genreTest = new() { Id = 2001, Name = "WhenValidInputsAreGiven_Genre_ShouldBeDeleted" };
+            Genre genreTest = new() { Id = 500, Name = "WhenValidInputsAreGiven_Genre_ShouldBeDeleted" };
             _context.Genres.Add(genreTest);
             _context.SaveChanges();
 

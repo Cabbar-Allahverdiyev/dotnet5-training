@@ -32,7 +32,7 @@ namespace Webapi.UnitTests.Application.BookOperations.Commands.BookCommands.Upda
             _context.SaveChanges();
 
             UpdateBookCommand command = new(_context);
-            command.BookId =150 ;
+            command.BookId =404 ;
             //act & assert 
             FluentActions
                 .Invoking(() => command.Handle())
@@ -43,7 +43,7 @@ namespace Webapi.UnitTests.Application.BookOperations.Commands.BookCommands.Upda
         public void WhenValidInputsAreGiven_Book_shouldBeUpdate()
         {
             //arrange
-            Book testBook = new Book() { Id = 900, Title = "WhenValidInputsAreGiven_Book_shouldBeUpdate", PageCount = 100, PublishDate = new DateTime(1990, 1, 22), GenreId = 1 };
+            Book testBook = new Book() { Id = 200, Title = "WhenValidInputsAreGiven_Book_shouldBeUpdate", PageCount = 100, PublishDate = new DateTime(1990, 1, 22), GenreId = 1 };
             _context.Books.Add(testBook);
             _context.SaveChanges();
 

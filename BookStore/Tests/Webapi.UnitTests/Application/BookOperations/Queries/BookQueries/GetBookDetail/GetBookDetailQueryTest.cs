@@ -27,7 +27,7 @@ namespace Webapi.UnitTests.Application.BookOperations.Queries.BookQueries.GetBoo
         public void WhenAlreadyNotExistBookIdGiven_InvalidOperationException_ShouldBeReturn()
         {
             //arrange
-            Book testBook = new Book() { Id = 1003, Title = "Dune", GenreId = 2, PageCount = 540, PublishDate = new DateTime(2002, 05, 23) };
+            Book testBook = new Book() { Id = 800, Title = "Dune", GenreId = 2, PageCount = 540, PublishDate = new DateTime(2002, 05, 23) };
 
             _context.Books.Add(testBook);
             _context.SaveChanges();

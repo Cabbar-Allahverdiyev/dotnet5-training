@@ -31,7 +31,7 @@ namespace Webapi.UnitTests.Application.BookOperations.Commands.BookCommands.Dele
 
             DeleteBookCommand command = new(_context)
             {
-                BookId = 150
+                BookId = 404
             };
 
             //act(Ise Salma) & assert(Tesdileme)
@@ -44,7 +44,7 @@ namespace Webapi.UnitTests.Application.BookOperations.Commands.BookCommands.Dele
         public void WhenValidInputsAreGiven_Book_shouldBeDeleted()
         {
             //arrenge
-            Book testBook = new Book() { Id = 1030, Title = "WhenValidInputsAreGiven_Book_shouldBeDeleted", PageCount = 100, PublishDate = new DateTime(1990, 1, 22), GenreId = 1 };
+            Book testBook = new Book() { Id = 100, Title = "WhenValidInputsAreGiven_Book_shouldBeDeleted", PageCount = 100, PublishDate = new DateTime(1990, 1, 22), GenreId = 1 };
             _context.Books.Add(testBook);
             _context.SaveChanges();
 
