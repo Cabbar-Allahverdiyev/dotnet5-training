@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Practices\\net5-training\\BookStore\\Tests\\Webapi.UnitTests\\Webapi.UnitTests.csproj": {}
+    "C:\\Users\\Samsung\\Source\\Repos\\dotnet5-training\\BookStore\\Tests\\WebApi.UnitTests\\Webapi.UnitTests.csproj": {}
   },
   "projects": {
-    "C:\\Practices\\net5-training\\BookStore\\BookStoreWebApi\\BookStoreWebApi.csproj": {
+    "C:\\Users\\Samsung\\Source\\Repos\\dotnet5-training\\BookStore\\BookStoreWebApi\\BookStoreWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Practices\\net5-training\\BookStore\\BookStoreWebApi\\BookStoreWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\Samsung\\Source\\Repos\\dotnet5-training\\BookStore\\BookStoreWebApi\\BookStoreWebApi.csproj",
         "projectName": "BookStoreWebApi",
-        "projectPath": "C:\\Practices\\net5-training\\BookStore\\BookStoreWebApi\\BookStoreWebApi.csproj",
-        "packagesPath": "C:\\Users\\cabbar\\.nuget\\packages\\",
-        "outputPath": "C:\\Practices\\net5-training\\BookStore\\BookStoreWebApi\\obj\\",
+        "projectPath": "C:\\Users\\Samsung\\Source\\Repos\\dotnet5-training\\BookStore\\BookStoreWebApi\\BookStoreWebApi.csproj",
+        "packagesPath": "C:\\Users\\Samsung\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Samsung\\Source\\Repos\\dotnet5-training\\BookStore\\BookStoreWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\cabbar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Samsung\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -95,24 +95,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Practices\\net5-training\\BookStore\\Tests\\Webapi.UnitTests\\Webapi.UnitTests.csproj": {
+    "C:\\Users\\Samsung\\Source\\Repos\\dotnet5-training\\BookStore\\Tests\\WebApi.UnitTests\\Webapi.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Practices\\net5-training\\BookStore\\Tests\\Webapi.UnitTests\\Webapi.UnitTests.csproj",
+        "projectUniqueName": "C:\\Users\\Samsung\\Source\\Repos\\dotnet5-training\\BookStore\\Tests\\WebApi.UnitTests\\Webapi.UnitTests.csproj",
         "projectName": "Webapi.UnitTests",
-        "projectPath": "C:\\Practices\\net5-training\\BookStore\\Tests\\Webapi.UnitTests\\Webapi.UnitTests.csproj",
-        "packagesPath": "C:\\Users\\cabbar\\.nuget\\packages\\",
-        "outputPath": "C:\\Practices\\net5-training\\BookStore\\Tests\\Webapi.UnitTests\\obj\\",
+        "projectPath": "C:\\Users\\Samsung\\Source\\Repos\\dotnet5-training\\BookStore\\Tests\\WebApi.UnitTests\\Webapi.UnitTests.csproj",
+        "packagesPath": "C:\\Users\\Samsung\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Samsung\\Source\\Repos\\dotnet5-training\\BookStore\\Tests\\WebApi.UnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\cabbar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Samsung\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -127,8 +127,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Practices\\net5-training\\BookStore\\BookStoreWEbapi\\BookStoreWebApi.csproj": {
-                "projectPath": "C:\\Practices\\net5-training\\BookStore\\BookStoreWEbapi\\BookStoreWebApi.csproj"
+              "C:\\Users\\Samsung\\Source\\Repos\\dotnet5-training\\BookStore\\BookStoreWEbapi\\BookStoreWebApi.csproj": {
+                "projectPath": "C:\\Users\\Samsung\\Source\\Repos\\dotnet5-training\\BookStore\\BookStoreWEbapi\\BookStoreWebApi.csproj"
               }
             }
           }
@@ -195,7 +195,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

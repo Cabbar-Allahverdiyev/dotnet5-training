@@ -20,6 +20,27 @@ namespace BookStoreWebApi.DBOperations
                     return;   // Data was already seeded
                 }
 
+                context.Authors.AddRange(
+                    new Author()
+                    {
+                        FirstName = "Fyodor",
+                        LastName = "Dostoyevski",
+                        DateOfBirth = DateTime.Now
+                    },
+                    new Author()
+                    {
+                        FirstName = "Xalid",
+                        LastName = "Huseyni",
+                        DateOfBirth = DateTime.Now
+                    },
+                    new Author()
+                    {
+                        FirstName = "Cou",
+                        LastName = "Navarro",
+                        DateOfBirth = DateTime.Now
+                    }
+                    ) ;
+
                 context.Genres.AddRange(
                     new Genre()
                     {
@@ -40,6 +61,7 @@ namespace BookStoreWebApi.DBOperations
                    {
                        Title = "Lean Startup",
                        GenreId = 1,
+                       AuthorId=1,
                        PageCount = 200,
                        PublishDate = new DateTime(2001, 06, 12)
                    },
@@ -47,6 +69,7 @@ namespace BookStoreWebApi.DBOperations
                     {
                         Title = "Herland",
                         GenreId = 2,
+                        AuthorId=2,
                         PageCount = 250,
                         PublishDate = new DateTime(2002, 06, 12)
                     },
@@ -54,6 +77,7 @@ namespace BookStoreWebApi.DBOperations
                     {
                         Title = "Dune",
                         GenreId = 2,
+                        AuthorId = 2,
                         PageCount = 540,
                         PublishDate = new DateTime(2002, 05, 23)
                     });
